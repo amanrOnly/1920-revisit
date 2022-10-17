@@ -14,15 +14,24 @@
  * }
  */
 class Solution {
-            List<Integer> ans=new ArrayList<Integer>();
+//             List<Integer> ans=new ArrayList<Integer>();
 
+//     public List<Integer> preorderTraversal(TreeNode root) {
+//         if(root==null) return ans;
+        
+//         ans.add(root.val);
+//         ans.addAll(preorderTraversal(root.left));
+//         ans.addAll(preorderTraversal(root.right));
+//         return ans;
+        
+//     }
+    
     public List<Integer> preorderTraversal(TreeNode root) {
-        if(root==null) return ans;
-        
-        ans.add(root.val);
-        preorderTraversal(root.left);
-        preorderTraversal(root.right);
-        return ans;
-        
-    }
+		List<Integer> pre = new LinkedList<Integer>();
+		if(root==null) return pre;
+		pre.add(root.val);
+		pre.addAll(preorderTraversal(root.left));
+		pre.addAll(preorderTraversal(root.right));
+		return pre;
+	}
 }
