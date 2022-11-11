@@ -24,8 +24,3 @@ class Solution {
         return ans;
     }
 }
-// n=6
-// abbaca
-// i=0;
-// element=a
-// [a]
