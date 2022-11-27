@@ -53,7 +53,6 @@ class Solution {
             binarySearch(nums, target, false)
         };
     }
-    
     private int binarySearch(int[] nums, int target, boolean isLeft) {
         int n = nums.length, start = 0, end = n - 1;
         while (start + 1 < end) {
