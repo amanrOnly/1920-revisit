@@ -37,7 +37,7 @@ class GFG {
 class Solution {
     // Function to return a list containing the DFS traversal of the graph.
     
-    public ArrayList<Integer> DFS(int i, ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> ans, int[] vis){
+    public void DFS(int i, ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> ans, int[] vis){
         ans.add(i);
         vis[i]=1;
         for(Integer it: adj.get(i)){
@@ -45,7 +45,7 @@ class Solution {
                 DFS(it, adj, ans, vis);
             }
         }
-        return ans;
+        
     }
     
     public ArrayList<Integer> dfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
